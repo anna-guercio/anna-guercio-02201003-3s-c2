@@ -28,7 +28,6 @@ public class LutadorController {
 
     @GetMapping("/contagem-vivos")
     public ResponseEntity getContagemVivos(){
-        int lutadores = repository.countAllByVivoTrue();
-        return ResponseEntity.status(200).body(lutadores);
+        return ResponseEntity.status(200).body(repository.countAllByVivoTrue());
     }
 }
